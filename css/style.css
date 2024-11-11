@@ -51,8 +51,7 @@ nav ul li a:hover {
 table, #team-results table {
     display: block;
     width: 100%;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto;
     border-collapse: collapse;
     margin-bottom: 20px;
     color: #000000;

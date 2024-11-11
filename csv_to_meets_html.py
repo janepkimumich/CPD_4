@@ -117,7 +117,7 @@ def csv_to_html(csv_filename, output_folder):
    </section>
    </main>   
    <footer>
-                     <p>
+               <p>
                      Skyline High School<br>
                      <address>
                      2552 North Maple Road<br>
@@ -128,6 +128,8 @@ def csv_to_html(csv_filename, output_folder):
 
 
                      </footer>
+        <button id="scrollTopBtn" class="fab" aria-label="Scroll to top">↑</button>
+        <script src="..js/scrollToTop.js"></script>
         </body>
 </html>
 """

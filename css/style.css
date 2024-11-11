@@ -75,7 +75,7 @@ tr:nth-child(odd) {
 
 #meets-table table {
     width: 100%;
-    max-width: 1200 px;
+    max-width: 1200px;
     border-collapse: collapse;
     margin: 0 auto;
     font-size: 1em;
@@ -106,7 +106,7 @@ tr:nth-child(odd) {
 #team-results th, #team-results td {
     padding: 12px;
     text-align: left;
-    border: 3px solid #a1371a;
+    border: 3px solid #256689;
 }
 #team-results tr:nth-child(even) {
     background-color: #F4F1DE;
@@ -125,6 +125,10 @@ footer {
   
 footer a {
     color:#F4F1DE;
+}
+
+footer a:hover {
+    color: #256689;
 }
 
 
@@ -172,10 +176,7 @@ footer a {
         color:#3D405B;
         background-color: #F4F1DE;
     } 
-}
-
-/* dark mode table adjustments */
-@media (prefers-color-scheme: dark) {
+    
     #team-results {
         background-color: #3D405B;
         color: #F4F1DE;
@@ -209,13 +210,19 @@ footer a {
     padding: 20px
 }
 
+#individual-results h2:first-of-type {
+    grid-column: span 3;
+    width: 100%;
+    text-align: left;
+}
+
 #individual-results .athlete {
     display: flex;
     flex-direction: column;
     align-items: center;
     color:#3D405B;
     background-color: #F4F1DE;
-    border: 2px solid #3D405B;
+    border: 2px solid #256689;
     border-radius: 8px;
     padding: 15px;
     text-align: center;
@@ -232,32 +239,32 @@ footer a {
 #individual-results img {
     width: 100%;
     border-radius: 8px;
-    border: 3px solid #3D405B;
+    border: 3px solid #256689;
     margin-bottom: 10px;
     align-content: center;
 }
 
 #individual-results figcaption {
     font-weight: bold;
-    color:#3D405B;
+    color:#256689;
     margin-top: 5px;
     align-content: center;
 }
 
 #individual-results dl {
-    color:#3D405B;
+    color:#256689;
     margin: 10px 0;
     align-content: left;
 }
 
 #individual-results dt {
     font-weight: bold;
-    color: #3D405B;
+    color: #256689;
 }
 
 #individual-results dd {
     margin-left: 0;
-    color: #3D405B;
+    color: #256689;
 }
 
 /* individual results in dark mode */
@@ -357,7 +364,7 @@ section.collapsible.active.content {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #a1371a;
+    background-color: #256689;
     color: #F4F1DE;
     width: 50px;
     height: 50px;
@@ -369,35 +376,64 @@ section.collapsible.active.content {
     font-size: 24px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s;
+    display: none;
 }
 .fab:hover {
     background-color: #3D405B;
 }
 
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #256689;
+    display: none;
+    color: #F4F1DE;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    z-index: 1000;
+}
+
+#scrollTopBtn:hover {
+    background-color: #3D405B;
+}
+
 /* standard view for larger screens */
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 1200px) {
     body {
         font-size: 1.1rem;
     }
     nav ul {
-        justify-content: flex-start;
+        justify-content: center;
         gap: 30px;
         padding: 15px 30px;
     }
-    table, #team-results table {
-        margin: 20px auto;
-        width: 90%;
-    }
-    
+
     table td, table th {
         display: table-cell;
         padding: 12px;
         font-size: 1rem;
     }
 
-    #meets-table table {
+    table, #meets-table table, #team-results table {
+       justify-content: center;
         width: 80%;
-        max-width: 1500px;
+        margin: 0 auto;
+        /*max-width: 1500px;*/
         font-size: 1.2em;
     }
-} 
+
+    #team-results {
+        margin: 0 auto;
+        /* width: 100vw; */
+        padding: 0 20px;
+    }
+}

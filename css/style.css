@@ -17,10 +17,11 @@ a:hover {
 /* header styling */
 header {
     text-align: center;
-    color: #78aece;
+    color: #256689;
 }
 header h1, header h2 {
     margin: 10px;
+    color: #256689;
 }
 body header h1 a:hover {
     color: #292d2f;
@@ -43,28 +44,30 @@ nav ul li a {
     font-weight: bold;
 }
 nav ul li a:hover {
-    color: #292d2f;
+    color: #d2d3d4;
 }
 
 /* mobile first responsive table design */
 table, #team-results table {
     display: block;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
     border-collapse: collapse;
     margin-bottom: 20px;
-    color: #256689;
-    background-color:#fafafa;
+    color: #000000;
+    background-color: #fafafa;
 }
   
 th, td {
     padding: 12px;
     text-align: center;
     border: 3px solid #292d2f;
+    color: #000000;
 }
 
 tr:nth-child(odd) {
-    background-color:#d2d3d4;
+    background-color:#f2f4b2;
 }
 
 #meets-table {
@@ -74,8 +77,7 @@ tr:nth-child(odd) {
 }
 
 #meets-table table {
-    width: 100%;
-    max-width: 1200px;
+    width: 100vw;
     border-collapse: collapse;
     margin: 0 auto;
     font-size: 1em;
@@ -84,6 +86,7 @@ tr:nth-child(odd) {
     padding: 12px;
     border: 3px solid #256689;
     text-align: center;
+    color: #000000;
 }
 #meets-table th {
     background-color: #78aece;
@@ -97,16 +100,17 @@ tr:nth-child(odd) {
 }
 
 #team-results table {
-    width: 100%;
+    width: 100vw;
     border-collapse: collapse;
     margin-bottom: 20px;
-    color: #3D405B;
+    color: #000000;
     background-color: #F4F1DE;
 }
 #team-results th, #team-results td {
     padding: 12px;
     text-align: left;
     border: 3px solid #256689;
+    color: #000000;
 }
 #team-results tr:nth-child(even) {
     background-color: #F4F1DE;
@@ -116,7 +120,7 @@ tr:nth-child(odd) {
 footer {
     text-align: center;
     background-color: #78aece;
-    color: #F4F1DE;
+    color: #292d2f;
     padding: 20px 0;
     position: relative;
     bottom: 0;
@@ -124,7 +128,7 @@ footer {
 }
   
 footer a {
-    color:#F4F1DE;
+    color:#292d2f;
 }
 
 footer a:hover {
@@ -212,7 +216,7 @@ footer a:hover {
 
 #individual-results h2:first-of-type {
     grid-column: span 3;
-    width: 100%;
+    width: 100vw;
     text-align: left;
 }
 
@@ -424,16 +428,15 @@ section.collapsible.active.content {
     }
 
     table, #meets-table table, #team-results table {
-       justify-content: center;
-        width: 80%;
+        justify-content: center;
+        width: 100%;
+        max-width: none;
         margin: 0 auto;
-        /*max-width: 1500px;*/
         font-size: 1.2em;
     }
 
     #team-results {
         margin: 0 auto;
-        /* width: 100vw; */
         padding: 0 20px;
     }
 }

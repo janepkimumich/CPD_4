@@ -130,6 +130,7 @@ def csv_to_html(csv_filename, output_folder):
                      </footer>
         <button id="scrollTopBtn" class="fab" aria-label="Scroll to top">↑</button>
         <script src="..js/scrollToTop.js"></script>
+        <script src="..js/imagePlaceholder.js"></script>
         </body>
 </html>
 """
